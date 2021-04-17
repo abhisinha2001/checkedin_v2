@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1026455455767",
+    "project_id": "checkedin-6ed52",
+    "storage_bucket": "checkedin-6ed52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026455455767:android:495193c662f09c8a46f452",
+        "android_client_info": {
+          "package_name": "com.checkedin.checkedin_v2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026455455767-4klqrjepftp41fm5pikca728snt4b7th.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.checkedin.checkedin_v2",
+            "certificate_hash": "ee0ac56fd9e82fdff767d91db270d2c3d737a06e"
+          }
+        },
+        {
+          "client_id": "1026455455767-q9chftupi5s2cr9u3iagi1ijgvmba0ht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArnZobC-S5VcKiUbHURHVd28hIt6IpBnI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1026455455767-q9chftupi5s2cr9u3iagi1ijgvmba0ht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
