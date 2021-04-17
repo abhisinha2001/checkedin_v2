@@ -1,4 +1,4 @@
-import 'package:checkedin_v2/constants.dart';
+import 'package:checkedin_v2/src/constants.dart';
 import 'package:checkedin_v2/src/models/visitor.dart';
 import 'package:checkedin_v2/src/screens/confirmPage.dart';
 import 'package:checkedin_v2/src/services/firestore_service.dart';
