@@ -1,3 +1,4 @@
+import 'package:checkedin_v2/src/constants.dart';
 import 'package:checkedin_v2/src/services/firestore_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,8 @@ class _ConfirmPageState extends State<ConfirmPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
+        backgroundColor: kblue,
         title: Text('My Confirm Page'),
       ),
       body: Container(

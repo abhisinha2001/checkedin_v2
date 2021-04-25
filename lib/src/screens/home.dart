@@ -1,6 +1,7 @@
 import 'package:checkedin_v2/src/constants.dart';
 import 'package:checkedin_v2/src/models/visitor.dart';
 import 'package:checkedin_v2/src/screens/confirmPage.dart';
+import 'package:checkedin_v2/src/screens/enterDetails.dart';
 import 'package:checkedin_v2/src/services/firestore_service.dart';
 import 'package:flutter/material.dart';
 
@@ -79,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             phone: '8123920076');
                         firestoreService.setVisitor(visitor);
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => ConfirmPage()));
+                            builder: (context) => EnterDetailsPage()));
                       }),
                 ],
               ),
