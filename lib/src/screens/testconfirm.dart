@@ -1,7 +1,8 @@
 import 'dart:async';
-
 import 'package:checkedin_v2/src/blocs/auth_bloc.dart';
 import 'package:checkedin_v2/src/screens/login.dart';
+import 'package:checkedin_v2/src/screens/testShared.dart';
+import 'package:checkedin_v2/src/services/userSimpleServices.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,6 +16,7 @@ class TestPage extends StatefulWidget {
 
 class _TestPageState extends State<TestPage> {
   StreamSubscription<User> loginStateSubscription;
+  String email = 'soneone';
   @override
   void initState() {
     var authBloc = Provider.of<AuthBloc>(context, listen: false);
@@ -25,6 +27,7 @@ class _TestPageState extends State<TestPage> {
       }
     });
     super.initState();
+    email = UserSimpleServices.getEmail();
   }
 
   @override
@@ -47,10 +50,12 @@ class _TestPageState extends State<TestPage> {
             return Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
-                  snapshot.data.displayName,
-                  style: TextStyle(
-                    fontSize: 40,
+                Center(
+                  child: Text(
+                    snapshot.data.email,
+                    style: TextStyle(
+                      fontSize: 40,
+                    ),
                   ),
                 ),
                 CircleAvatar(
@@ -58,6 +63,14 @@ class _TestPageState extends State<TestPage> {
                       snapshot.data.photoURL.replaceFirst('s96', 's400')),
                   radius: 60,
                 ),
+                SignInButton(
+                    buttonType: ButtonType.google,
+                    btnText: 'Save Details',
+                    onPressed: () async {
+                      await UserSimpleServices.setEmail(snapshot.data.email);
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) => TestShared()));
+                    }),
                 SignInButton(
                     buttonType: ButtonType.google,
                     btnText: 'Sign Out of google',
