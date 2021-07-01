@@ -1,4 +1,5 @@
 import 'package:checkedin_v2/src/blocs/controller_bloc.dart';
+import 'package:checkedin_v2/src/screens/confirmPage.dart';
 import 'package:flutter/material.dart';
 
 class EnterDetailsPage extends StatefulWidget {
@@ -78,6 +79,39 @@ class _EnterDetailsPageState extends State<EnterDetailsPage> {
                     ),
                   ),
                 ),
+                ElevatedButton(
+                      style: ButtonStyle(
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                        ),
+                      ),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        height: 60,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text(
+                              'Proceed',
+                              style: TextStyle(
+                                  fontSize: 30, fontWeight: FontWeight.bold),
+                            ),
+                            Icon(
+                              Icons.arrow_right_alt_rounded,
+                              size: 60,
+                            ),
+                          ],
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => ConfirmPage()));
+                      }),
               ],
             ),
           ),
